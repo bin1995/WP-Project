@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <title>UBLIKE 站點搜尋</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+    <style>
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: red;
+        }
+
+        li.dropdown {
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        #map {
+            width: 100%;
+            height: 450px;
+        }
+
+        #directions {
+            background-color: #0cbdaa;
+            padding: 22px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<ul>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="ubike.html">bike站點</a></li>
+    <li><a href="#">行程推薦</a></li>
+</ul>
+
+
+<!-- UBKIKE -->
+<section id="map" data-scrollwheel="false"></section>
+<section id="directions">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <form action="//maps.google.com/maps" method="get" target="_blank">
+                    <div class="input-group">
+                        <input type="text" name="saddr" placeholder="輸入你的起點" class="form-control style-2"/>
+                        <input type="hidden" name="daddr" value="台中市西屯區文華路100號"/>
+                        <!-- Write here your end point -->
+                        <span class="input-group-btn">
+            <button class="btn" type="submit" value="Get directions" style="margin-left:0;">規劃路線</button>
+          </span>
+                    </div><!-- /input-group -->
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Footer -->
+<footer id="footer">
+    <span class="copyright">&copy; Untitled. Design: 阿肥小公主</span>
+</footer>
+
+
+</body>
+</html>
