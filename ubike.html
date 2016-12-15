@@ -56,9 +56,25 @@
         .dropdown:hover .dropdown-content {
             display: block;
         }
+        table, td, th {
+           border: 2px solid black;
+        }
+
+        table {
+           border: 1px solid black;
+           width: 20%;
+           float:left;
+        }
+        th {
+           height: 40px;
+           }
+        td {
+           height: 20px;
+           }
         #map {
-            width: 100%;
+            width: 80%;
             height: 450px;
+
         }
         #directions {
             background-color: rgb(174, 170, 239);
@@ -78,7 +94,40 @@
 
 
 <!-- UBKIKE -->
-<section id="map" data-scrollwheel="false"></section>
+
+    <table>
+      <tr>
+        <th>推薦</th>
+        <th>地名</th>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+      </tr>
+      <tr>
+        <td> </td>
+        <td> </td>
+      </tr>
+    </table>
+
+
+<section id="map" data-scrollwheel="false">
+
+    <div id="map"></div>
+    
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPYdIwHRMacQ5uCJ7I5KrArv4fpPWg-vc&callback=initMap">
+    </script>
+    <script src="map.js"></script>
+</section>
 <section id="directions">
     <div class="container">
         <div class="row">
