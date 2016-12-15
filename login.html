@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script>
+	$(document).ready(function(){
+		$(".login-button").click(function(){
+			 with(document.all){
+
+			 	if(reg_username.value == "")
+			 	{
+					alert("請輸入usename!!");
+				} 
+				if(reg_password.value == "")
+				{
+					alert("請輸入password!!");
+				}
+				
+			 }
+		});
+	});
+
+  </script>
+  <style>
+	body, html{
+		background-color: #d3d3d3;
+	}
+	
+	.etc-login-form {
+  		padding: 10px 22px;
+	}
+
+	/*===  Main Form ===*/
+	.login-form-1 {
+		max-width: 300px;
+  		border-radius: 5px;
+  		display: inline-block;
+	}
+
+	.main-login-form {
+  		position: relative;
+	}
+
+	.login-form-1 .form-control {
+  		border: 0;
+  		box-shadow: 0 0 0;
+  		border-radius: 0;
+  		background: transparent;
+  		color: #555555;
+  		padding:10px 0;
+  		font-weight: bold;
+  		height:auto;
+	}
+	
+	.login-form-1 .form-group {
+  		margin-bottom: 0;
+  		border-bottom: 2px solid #efefef;
+  		padding-right: 20px;
+  		position: relative;
+	}
+
+	.login-form-1 .form-group:last-child {
+  		border-bottom: 0;
+	}
+
+	.login-group {
+  		background: #ffffff;
+  		color: #999999;
+  		border-radius: 8px;
+  		padding: 10px 20px;
+	}
+
+	.login-group-checkbox {
+  		padding: 5px 0;
+	}
+
+	/*===  Login Button ===*/
+	.login-form-1 .login-button {
+  		position: absolute;
+  		right: -25px;
+  		top: 50%;
+  		background: white;
+  		color: #999999;
+  		padding: 18.5px 0;
+  		width: 68px;
+  		height: 68px;
+  		margin-top: -38.5px;
+  		border: 5px solid #efefef;
+  		border-radius: 50%;
+  		transition: all ease-in-out 500ms;
+	}
+
+	.login-form-1 .login-button:hover {
+  		color: #555555;
+  		transform: rotate(450deg);
+	}
+	
+	/*===  Form - Main Message ===*/
+	.login-form-main-message {
+  		margin-bottom: 8px;
+  		transition: all ease-in-out 200ms;
+	}
+	
+	/* Base for label styling */
+	[type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked,
+	[type="radio"]:not(:checked),
+	[type="radio"]:checked {
+  		position: absolute;
+  		left: -9999px;
+	}
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label,
+	[type="radio"]:not(:checked) + label,
+	[type="radio"]:checked + label {
+  		position: relative;
+  		padding-left: 25px;
+  		padding-top: 1px;
+  		cursor: pointer;
+	}
+
+	/* checkbox aspect */
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before,
+	[type="radio"]:not(:checked) + label:before,
+	[type="radio"]:checked + label:before {
+  		content: '';
+  		position: absolute;
+  		left: 0;
+  		top: 2px;
+  		width: 17px;
+  		height: 17px;
+  		border: 0px solid #aaa;
+  		background: #f0f0f0;
+  		border-radius: 3px;
+  		box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3);
+	}
+
+	/* checked mark aspect */
+	[type="checkbox"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after,
+	[type="radio"]:checked + label:after {
+	 	position: absolute;
+  		color: #555555;
+  		transition: all .2s;
+	}
+
+	/* checked mark aspect changes */
+	[type="checkbox"]:not(:checked) + label:after,
+	[type="radio"]:not(:checked) + label:after {
+	  	opacity: 0;
+  		transform: scale(0);
+	}
+	[type="checkbox"]:checked + label:after,
+	[type="radio"]:checked + label:after {
+  		opacity: 1;
+  		transform: scale(1);
+	}
+
+	/* disabled checkbox */
+	[type="checkbox"]:disabled:not(:checked) + label:before,
+	[type="checkbox"]:disabled:checked + label:before,
+	[type="radio"]:disabled:not(:checked) + label:before,
+	[type="radio"]:disabled:checked + label:before {
+  		box-shadow: none;
+  		border-color: #8c8c8c;
+  		background-color: #878787;
+	}
+	[type="checkbox"]:disabled:checked + label:after,
+	[type="radio"]:disabled:checked + label:after {
+  		color: #555555;
+	}
+	[type="checkbox"]:disabled + label,
+	[type="radio"]:disabled + label {
+  		color: #8c8c8c;
+	}
+
+	/* accessibility */
+	[type="checkbox"]:checked:focus + label:before,
+	[type="checkbox"]:not(:checked):focus + label:before,
+	[type="checkbox"]:checked:focus + label:before,
+	[type="checkbox"]:not(:checked):focus + label:before {
+  		border: 1px dotted #f6f6f6;
+	}
+	/* hover style just for information */
+	label:hover:before {
+  		border: 1px solid #f6f6f6 !important;
+	}
+
+	/*=== Customization ===*/
+	/* radio aspect */
+	[type="checkbox"]:not(:checked) + label:before,
+	[type="checkbox"]:checked + label:before
+	{
+  		border-radius: 3px;
+	}
+	[type="radio"]:not(:checked) + label:before,
+	[type="radio"]:checked + label:before {
+  		border-radius: 35px;
+	}
+
+	/* selected mark aspect */
+	[type="checkbox"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after {
+  		content: '✔';
+  		top: 0;
+  		left: 2px;
+  		font-size: 14px;
+	}
+	[type="radio"]:not(:checked) + label:after,
+	[type="radio"]:checked + label:after {
+  		content: '\2022';
+  		top: 0;
+  		left: 3px;
+  		font-size: 30px;
+  		line-height: 25px;
+	}
+
+	.logo {
+  		padding: 15px 0;
+  		font-size: 25px;
+  		font-weight: bold;
+	}
+
+	/*置中*/
+	.box {
+  		position:absolute;
+		top:50%;
+		left:50%;
+
+		margin-top:-315.2px;
+		margin-left:-134.87px;
+	}
+ </style>
+</head>
+
+<body>
+<div class="box">
+	<div class="text-center" style="padding:50px 0">
+	
+		<div class="logo"><h1>Login</h1></div>
+	
+		<!-- Main Form -->
+	
+		<div class="login-form-1">
+	
+			<form id="register-form" class="text-left">
+
+				<div class="login-form-main-message"></div>
+
+				<div class="main-login-form">
+	
+					<div class="login-group">
+
+					<div class="form-group">
+						<label for="reg_username" class="sr-only">Email address</label>
+						<input type="text" class="form-control" id="reg_username" name="reg_username" placeholder="username">
+					</div>
+						
+					<div class="form-group">
+						<label for="reg_password" class="sr-only">Password</label>
+						<input type="password" class="form-control" id="reg_password" name="reg_password" placeholder="password">
+					</div>
+	
+					
+<br>				
+				<div class="login-button">
+					<input type="button" style="display:none;"><label for="login-button">&nbspsubmit></label>
+				</div>
+			</div>
+			<div class="etc-login-form">
+				<p>Don't have an account? <a href="sign_up.html">Register here!</a></p>
+			</div>
+		</form>
+	</div>
+</div>
+</body>
+</html>
