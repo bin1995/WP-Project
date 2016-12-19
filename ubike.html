@@ -89,33 +89,18 @@
     <li><a href="index.html">首頁</a></li>
     <li><a href="ubike.html">bike站點</a></li>
     <li><a href="#">行程推薦</a></li>
-    <li><a href="#">會員登入</a></li>
+    <li><a href="login.html">會員登入</a></li>
 </ul>
 
 
 <!-- UBKIKE -->
 
-    <table>
+    <table id="recommendTable">
       <tr>
         <th>推薦</th>
         <th>地名</th>
       </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-      </tr>
-      <tr>
-        <td> </td>
-        <td> </td>
-      </tr>
+     
     </table>
 
 
@@ -126,23 +111,25 @@
     <script async defer
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBPYdIwHRMacQ5uCJ7I5KrArv4fpPWg-vc&callback=initMap">
     </script>
-    <script src="map.js"></script>
+    <script src="jquery-3.1.1.min.js"></script>
+    <script src="ubike.js"></script>
 </section>
 <section id="directions">
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <form action="//maps.google.com/maps" method="get" target="_blank">
-                    <div class="input-group">
-                        <input type="text" name="saddr" size="25" style="color:black" placeholder="輸入你的起點" class="form-control style-2"/>
-                        <input  type="hidden" name="daddr" value="台中市西屯區文華路100號"/>
-			<input type="text" name="saddr" size="25" style="color:black" placeholder="輸入你的終點" class="form-control style-2"/>
-                        <!-- Write here your end point -->
-                        <span class="input-group-btn">
-            <button class="btn" type="submit" value="Get directions" style="margin-left:0;">規劃路線</button>
-          </span>
-                    </div><!-- /input-group -->
-                </form>             
+                
+                <div class="input-group">
+                    <input type="text" id="start" size="25" style="color:black" placeholder="輸入你的起點" class="form-control style-2"/>
+                    <button class="btn" type="submit" value="Change Start" style="margin-left:0;" onclick="startClick()">更改起點</button>
+                    <input  type="hidden" value="台中市西屯區文華路100號"/>
+		<input type="text" id="end" size="25" style="color:black" placeholder="輸入你的終點" class="form-control style-2"/>
+                    <!-- Write here your end point -->
+                    <span class="input-group-btn">
+        <button class="btn" type="submit" value="Get directions" style="margin-left:0;" onclick="endClick()">規劃路線</button>
+        </span>
+                </div><!-- /input-group -->
+                            
             </div>
         </div>
     </div>
@@ -150,10 +137,11 @@
 
 
 <!-- Footer -->
+<!--
 <footer id="footer">
     <span class="copyright">&copy; Untitled. Design: 阿肥小公主</span>
 </footer>
-
+ -->
 
 </body>
 </html>
