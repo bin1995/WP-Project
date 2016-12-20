@@ -164,10 +164,12 @@ function directions(start,end) {
   
 }
 
-function endToLatlng(addr){
+function endClick(){
+  drawMap();
+  var address=document.getElementById("end").value;
   var geocoder = new google.maps.Geocoder();
 
-  geocoder.geocode({ address: addr },
+  geocoder.geocode({ address: end },
   function (result, status) {
     if (status == google.maps.GeocoderStatus.OK) {
 
@@ -182,19 +184,11 @@ function endToLatlng(addr){
     }
   });
 
-}
-
-function endClick(){
-  drawMap();
-  var address=document.getElementById("end").value;
-  console.log(address);
-  endToLatlng(address);
 
 }
 
 function startClick(){
   var start=document.getElementById("start").value;
-  console.log(start);
 
   var geocoder = new google.maps.Geocoder();
 
