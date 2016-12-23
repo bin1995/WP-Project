@@ -269,6 +269,325 @@
 </head>
 
 <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <title>登入</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <!--[if lte IE 8]>
+    <script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css"/>
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="assets/css/ie8.css"/><![endif]-->
+    <!--[if lte IE 9]>
+    <link rel="stylesheet" href="assets/css/ie9.css"/><![endif]-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ <style>
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+		display: block;
+	}
+
+	 footer {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		font-size: 100%;
+		font: inherit;
+		vertical-align: baseline;
+	}
+
+	#footer {
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+		background-image: linear-gradient(top, rgba(0,0,0,0), rgba(0,0,0,0.5) 75%);
+		bottom: 0;
+		cursor: default;
+		height: 6em;
+		left: 0;
+		line-height: 8em;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: rgb(174,88,109);
+        }
+        li {
+            float: left;
+        }
+        li a, .dropbtn {
+            display: inline-block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        li a:hover, .dropdown:hover .dropbtn {
+            background-color: rgb(255, 103, 88);
+        }
+        li.dropdown {
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px  rgb(0, 0, 0, 0.2);
+        }
+        .dropdown-content a {
+            color:black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #f1f1f1
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        table, td, th {
+           border: 2px solid black;
+        }
+
+        table {
+           border: 1px solid black;
+           color: black;
+           width: 20%;
+           float:left;
+        }
+        th {
+           height: 40px;
+        }
+        td {
+           height: 20px;
+        }
+        #map {
+            width: 80%;
+            height: 450px;
+        }
+        #directions {
+            background-color: rgb(174, 170, 239);
+            text-align:center;
+            padding: 22px 0 0 0;
+        }
+    </style>
+
+  <script>
+	$(document).ready(function(){
+		$(".login-button").click(function(){
+			 with(document.all){
+
+			 	if(reg_username.value == "")
+			 	{
+					alert("請輸入usename!!");
+				} 
+				if(reg_password.value == "")
+				{
+					alert("請輸入password!!");
+				}
+				if(reg_password_confirm.value == "")
+				{
+					alert("請輸入confirm password!!");
+				}
+				if(reg_password_confirm.value != reg_password.value)
+				{
+					alert("confirm password 與 password 不符!!");
+				}
+				if(reg_email.value == "")
+				{
+					alert("請輸入email!!");
+				}
+				if(reg_email.value != "")
+				{
+					if(reg_email.value.match(/^[0-9a-zA-Z]([-._]*[0-9a-zA-Z])*@[0-9a-zA-Z]([-._]*[0-9a-zA-Z])*\.+[a-zA-Z]+$/)){}
+					else{alert("請輸入正確email!!");}
+				}
+				if(reg_fullname.value == "")
+				{
+					alert("請輸入fullname!!");
+				}
+				if(reg_agree.checked == 0)
+				{
+					alert("請勾選同意書!!");
+				}
+				else
+				{
+					alert("註冊成功!!");
+					location.href='';
+				}
+			 }
+		});
+	});
+
+  </script>
+  <style>
+	body, html{
+		background-color: #d3d3d3;
+	}
+	
+	.etc-login-form {
+  		padding: 10px 22px;
+	}
+
+	/*===  Main Form ===*/
+	.login-form-1 {
+		max-width: 300px;
+  		border-radius: 5px;
+  		display: inline-block;
+	}
+
+	.main-login-form {
+  		position: relative;
+	}
+
+	.login-form-1 .form-control {
+  		border: 0;
+  		box-shadow: 0 0 0;
+  		border-radius: 0;
+  		background: transparent;
+  		color: #555555;
+  		padding:10px 0;
+  		font-weight: bold;
+  		height:auto;
+	}
+	
+	.login-form-1 .form-group {
+  		margin-bottom: 0;
+  		border-bottom: 2px solid #efefef;
+  		padding-right: 20px;
+  		position: relative;
+	}
+
+	.login-form-1 .form-group:last-child {
+  		border-bottom: 0;
+	}
+
+	.login-group {
+  		background: #ffffff;
+  		color: #999999;
+  		border-radius: 8px;
+  		padding: 10px 20px;
+	}
+
+	.login-group-checkbox {
+  		padding: 5px 0;
+	}
+
+	/*===  Login Button ===*/
+	.login-form-1 .login-button {
+  		position: absolute;
+  		right: -25px;
+  		top: 50%;
+  		background: white;
+  		color: #999999;
+  		padding: 18.5px 0;
+  		width: 68px;
+  		height: 68px;
+  		margin-top: -38.5px;
+  		border: 5px solid #efefef;
+  		border-radius: 50%;
+  		transition: all ease-in-out 500ms;
+	}
+
+	.login-form-1 .login-button:hover {
+  		color: #555555;
+  		transform: rotate(450deg);
+	}
+	
+	/*===  Form - Main Message ===*/
+	.login-form-main-message {
+  		margin-bottom: 8px;
+  		transition: all ease-in-out 200ms;
+	}
+	
+	/* Base for label styling */
+	[type="checkbox"]:not(:checked),
+	[type="checkbox"]:checked,
+	[type="radio"]:not(:checked),
+	[type="radio"]:checked {
+  		position: absolute;
+  		left: -9999px;
+	}
+	[type="checkbox"]:not(:checked) + label,
+	[type="checkbox"]:checked + label,
+	[type="radio"]:not(:checked) + label,
+	[type="radio"]:checked + label {
+  		position: relative;
+  		padding-left: 25px;
+  		padding-top: 1px;
+  		cursor: pointer;
+	}
+
+
+
+	/* checked mark aspect */
+	[type="checkbox"]:not(:checked) + label:after,
+	[type="checkbox"]:checked + label:after,
+	[type="radio"]:not(:checked) + label:after,
+	[type="radio"]:checked + label:after {
+	 	position: absolute;
+  		color: #555555;
+  		transition: all .2s;
+	}
+
+	
+
+	/* accessibility */
+	[type="checkbox"]:checked:focus + label:before,
+	[type="checkbox"]:not(:checked):focus + label:before,
+	[type="checkbox"]:checked:focus + label:before,
+	[type="checkbox"]:not(:checked):focus + label:before {
+  		border: 1px dotted #f6f6f6;
+	}
+	/* hover style just for information */
+	label:hover:before {
+  		border: 1px solid #f6f6f6 !important;
+	}
+
+	
+
+	.logo {
+  		padding: 15px 0;
+  		font-size: 25px;
+  		font-weight: bold;
+	}
+
+	/*置中*/
+	.box {
+  		position:absolute;
+		top:50%;
+		left:50%;
+
+		margin-top:-315.2px;
+		margin-left:-134.87px;
+	}
+ </style>
+</head>
+
+<body>
+
+
+<div id="wrapper">
+<!-- Header -->
+<ul>
+    <li><a href="index.html">首頁</a></li>
+    <li><a href="ubike.html">bike站點</a></li>
+    <li><a href="#">行程推薦</a></li>
+    <li><a href="login.html">會員登入</a></li>
+</ul>
+
 <div class="box">
 	<div class="text-center" style="padding:50px 0">
 	
@@ -335,5 +654,9 @@
 		</form>
 	</div>
 </div>
+	
+
+</body>
+</html>
 </body>
 </html>

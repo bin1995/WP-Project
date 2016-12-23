@@ -166,7 +166,7 @@ function directions(start,end) {
 
 function endClick(){
   drawMap();
-  var address=document.getElementById("end").value;
+  var end=document.getElementById("end").value;
   var geocoder = new google.maps.Geocoder();
 
   geocoder.geocode({ address: end },
