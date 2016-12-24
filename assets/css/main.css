@@ -694,6 +694,11 @@
 			body, input, select, textarea {
 				font-size: 13pt;
 			}
+			#map {
+            	color: black;
+            	height: 450px;
+            	
+        	}
 
 		/* BG */
 
@@ -776,6 +781,11 @@
 			body, input, select, textarea {
 				font-size: 12pt;
 			}
+			#map {
+            	color: black;
+            	height: 450px;
+            	
+        	}
 
 		/* BG */
 
@@ -862,6 +872,11 @@
 			body, input, select, textarea {
 				font-size: 11pt;
 			}
+			#map {
+            	color: black;
+            	height: 300px;
+            	width: 100%;
+        	}
 
 		/* BG */
 
